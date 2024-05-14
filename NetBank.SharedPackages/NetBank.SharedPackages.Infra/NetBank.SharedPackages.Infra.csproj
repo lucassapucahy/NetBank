@@ -1,21 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-	  <PackageId>SharedPackagesInfra</PackageId>
-	  <Version>1.0.4</Version>
-	  <Authors>Lucas Lins</Authors>
-	  <Company>NetBank</Company>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<PackageId>NetBankSharedInfra</PackageId>
+		<Version>1.0.0</Version>
+		<Authors>Lucas Lins</Authors>
+		<Company>NetBank</Company>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.29" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.18" />
 		<PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
 	</ItemGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\NetBank.SharedPackages\NetBank.SharedPackages.csproj" />
+		<ProjectReference Include="..\NetBank.SharedPackages\NetBank.SharedPackages.csproj" />
 	</ItemGroup>
 
 </Project>

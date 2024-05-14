@@ -14,8 +14,7 @@ namespace NetBank.Users.API.Controllers
         private readonly INewUserUseCase _newUserUseCase;
         private readonly IInactivateUserUseCase _inactivateUserUseCase;
         private readonly IUserRepository _userRepository;
-
-        public UserController(INewUserUseCase newUserUseCase, IInactivateUserUseCase inactivateUserUseCase, ILogger<UserController> logger, 
+        public UserController(INewUserUseCase newUserUseCase, IInactivateUserUseCase inactivateUserUseCase, ILogger<UserController> logger,
             IUserRepository userRepository)
         {
             _logger = logger;
