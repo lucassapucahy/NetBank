@@ -5,8 +5,12 @@ if($userInput -eq 1)
     kubectl create namespace netbank
     kubectl apply -f GeralSecrets.yaml -n netbank
     kubectl apply -f SqlServer.yaml -n netbank
+    kubectl apply -f ElasticSearch.yaml
+    kubectl apply -f Kibana.yaml
+    kubectl apply -f Fluentd.yaml
 
-    #netbank users
+
+    # netbank users
     kubectl create namespace netbankusers
     kubectl apply -f GeralSecrets.yaml -n netbankusers
     cd ./NetBank.Users
@@ -26,5 +30,8 @@ if($userInput -eq 1)
 {
     kubectl delete namespace netbankusers
     kubectl delete namespace netbank
+    kubectl delete -f ElasticSearch.yaml
+    kubectl delete -f Kibana.yaml
+    kubectl delete -f Fluentd.yaml
 }
 
